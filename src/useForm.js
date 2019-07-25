@@ -6,7 +6,8 @@ const useForm = (callback) => {
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
-      callback(values);
+
+      callback(values.name,values.email,values.role);
   };
 
   const handleChange = (event) => {

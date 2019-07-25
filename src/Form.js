@@ -3,11 +3,12 @@ import useForm from "./useForm";
 
 const Form = (props) => {
     const { values, handleChange, handleSubmit } = useForm(getData);
+function getData(name,email,role) {
 
-    const getData = values => {
-        props.setMember( [...props.member, ...values] );
-      };
-
+    props.setName(props.name.concat(name))
+    props.setEmail(props.email.concat(email))
+    props.setRole(props.role.concat(role))
+}
     return (
     <div className="section is-fullheight">
       <div className="container">
@@ -35,6 +36,7 @@ const Form = (props) => {
               </div>
               <button type="submit" className="button is-block is-info is-fullwidth">Submit</button>
             </form>
+            Team Members: Name, Email, Role
           </div>
         </div>
       </div>
