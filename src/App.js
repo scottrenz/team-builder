@@ -23,13 +23,13 @@ const li = {
   return (
     <div className="App-header">
       <Form name={name} setName={setName} email={email} setEmail={setEmail} role={role} setRole={setRole} />
-<ul style={ul}>
+<ol start='0' style={ul}>
       {name.map(item => (
             <li key={item} className="movie-star">
               {item}
             </li>
           ))} 
-</ul>
+</ol>
 {/* <br></br> */}
 <ul style={ul}>
 {email.map(item => (
@@ -44,6 +44,22 @@ const li = {
 {role.map(item => (
             <li key={item} className="movie-star">
               {item}
+            </li>
+          ))} 
+</ul>
+
+<ul style={ul}>
+{role.map((item,ix) => (
+            <li key={ix} className="movie-star">
+              {ix}
+            </li>
+          ))} 
+</ul>
+
+<ul style={ul}>
+{role.map(item => (
+            <li key={'<-click toedit'} className="movie-star">
+              {'<--click id number to edit team member information'}
             </li>
           ))} 
 </ul>
